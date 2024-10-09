@@ -1,2 +1,2 @@
-# qr-api-bulk-scripts
+# qr-code-api-bulk
  
