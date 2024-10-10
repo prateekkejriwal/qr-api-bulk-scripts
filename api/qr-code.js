@@ -75,11 +75,11 @@ class QRCodeConfig {
     checkValueFormat(configField, value) {
         switch (configField.format) {
             case 'url':
-                try { new URL(value) } catch (exc) { return false } return true; break;
+                try { new URL(value) } catch (exc) { console.log(exc); return false } return true;
             case 'string': return Object.getPrototypeOf(value) === String.prototype
             case 'integer': if (value >= configField.supportedValues[0] && value <= configField.supportedValues[1]) { return true };
-            default: return false; break;
         }
+        return false;
     }
 
     getJSON() {

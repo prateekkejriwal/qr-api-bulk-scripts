@@ -33,4 +33,5 @@ async function createQRCodes(qrInput) {
 function log(data) {
     fs.appendFileSync('./logs.txt', `${new Date().toISOString()}\t${data}\n`)
 }
+
 createQRCodes(readCSV(config.inputCSVFile))
